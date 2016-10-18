@@ -3,6 +3,13 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+#map {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,'cwTeXHei', sans-serif;
   overflow-x: hidden;
@@ -35,7 +42,8 @@ h6 {
 
 hr.star-light,
 hr.star-primary,
-hr.star-pink {
+hr.star-pink,
+hr.star-green {
   padding: 0;
   border: none;
   border-top: solid 5px;
@@ -45,7 +53,9 @@ hr.star-pink {
 }
 hr.star-light:after,
 hr.star-primary:after,
-hr.star-pink:after {
+hr.star-pink:after,
+hr.star-green:after
+{
   content: "\f005";
   font-family: FontAwesome;
   display: inline-block;
@@ -53,6 +63,13 @@ hr.star-pink:after {
   top: -0.8em;
   font-size: 2em;
   padding: 0 0.25em;
+}
+hr.star-green {
+  border-color: #407A52;
+}
+hr.star-green:after {
+  background-color: #87D37C;
+  color: #006442;
 }
 hr.star-pink {
   border-color: #DB5A6B;
@@ -144,19 +161,34 @@ header .intro-text .skills {
   color: #F4D03F;
   outline: none;
 }
+
+.sidebar_jiyu01{
+  background: #044F67;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,'cwTeXHei', sans-serif;
+  padding: 0em 0em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.6em;
+  border: none;
+  text-shadow: 0.04em 0.05em  0.3em gray ;
+  box-shadow: 0.2em 0.2em 0.6em 0 gray ;
+  border-radius: 0.3em;
+
+}
+
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
   color: white;
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #F7CA18;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #F7CA18;
 }
 .navbar-custom .navbar-toggle {
   color: white;

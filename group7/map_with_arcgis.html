@@ -30,50 +30,63 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>MENU^-^ <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="#page-top">地圖分析</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#portfolio">回到首頁</a>
-                        </li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">其他<span class="caret"></span id="dropdown1"></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="map_with_arcgis.html" style="color: black">地圖分析</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>MENU^-^ <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">地圖分析</a>
             </div>
-        </nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">回到首頁</a>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">其他<span class="caret"></span id="dropdown1"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="map_with_arcgis.html" style="color: black">地圖分析</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
         <div style="height: 60px">
         </div>
         <div class="container-fluid">
-            <div class="col-lg-2" style="width:250px background-color: black">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-success">First item</a>
-                    <a href="#" class="list-group-item list-group-item-info">Second item</a>
-                    <a href="#" class="list-group-item list-group-item-warning">Third item</a>
-                    <a href="#" class="list-group-item list-group-item-danger">Fourth item</a>
-                </div>
+            <div class="col-lg-2 sidebar_jiyu01">
+                <a href="#" class="list-group-item list-group-item-success">台北市慢跑點</a>
+                <a href="#" class="list-group-item list-group-item-info">空氣品質疊圖</a>
+                <a href="#" class="list-group-item list-group-item-warning">人口分布疊圖</a>
+                <a href="#" class="list-group-item list-group-item-danger">綜合分析</a>
             </div>
-            <div class="col-lg-10" style="width: 100% height:100% background-color:pink">
+            <div class="col-lg-10 tundra" style="width: 100%  background-color:pink">
+                
+                    <div id="map"></div>
+ 
             </div>
         </div>
     </div>
     <script>
+
+    // Ensure the DOM is Available
+    var map;
+    require(["esri/map", "dojo/domReady!"], function(Map) {
+        // code to create the map and add a basemap will go here
+        map = new Map("map", {
+            basemap: "topo",
+            center: [-121.23, 23.5],
+            zoom: 13
+        });
+    });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     <!-- jQuery -->
